@@ -30,13 +30,24 @@ public class RageAbility : IAbility
 
 public class FireballAbility : MonoBehaviour, IAbility
 {
+    // I can use MonoBehavior Functions
+    private void Start()
+    {
+        // Initialize data or something else
+    }
     public void Use()
     {
         Debug.Log("Do Fireball Ability");
     }
 }
+
 public class HealAbility : ScriptableObject, IAbility
 {
+    // I also can use Scriptable Object properties
+
+    [SerializeField]
+    int _maxHealth = 100;
+
     public void Use()
     {
         Debug.Log("Do Heal Ability");
